@@ -2,6 +2,8 @@ import MainLayout from '@/layouts/MainLayout';
 import { Button, Form, Input, Picker } from 'antd-mobile/es';
 import { useState } from 'react';
 
+import styles from './index.less';
+
 const RegisterPage: React.FC = () => {
   const [domitoryPickerVisible, setDomitoryPickerVisible] = useState(false);
   const [domitoryPickerValue, setDomitoryPickerValue] =
@@ -11,7 +13,7 @@ const RegisterPage: React.FC = () => {
   return (
     <MainLayout title="注册">
       <Form
-        className="my-form"
+        className={`${styles.form} my-form`}
         form={form}
         layout="horizontal"
         footer={

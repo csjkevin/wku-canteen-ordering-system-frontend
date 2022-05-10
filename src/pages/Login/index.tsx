@@ -11,7 +11,7 @@ const LoginPage: React.FC = () => {
       <Logo />
       <div className={styles.login}>
         <Form
-          className="my-form"
+          className={`${styles.form} my-form`}
           layout="horizontal"
           footer={
             <div className={styles.buttons}>
