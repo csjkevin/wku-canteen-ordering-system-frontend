@@ -13,20 +13,18 @@ const MainLayout: React.FC<Props> = ({ title, navRight, children }) => {
 
   return (
     <>
-      <div className={styles.header}>
-        <NavBar
-          {...(canBack
-            ? {
-                onBack: () => {
-                  history.goBack();
-                },
-              }
-            : { back: '', backArrow: null })}
-          right={navRight}
-        >
-          {title}
-        </NavBar>
-      </div>
+      <NavBar
+        {...(canBack
+          ? {
+              onBack: () => {
+                history.goBack();
+              },
+            }
+          : { back: '', backArrow: null })}
+        right={navRight}
+      >
+        {title}
+      </NavBar>
       {children}
     </>
   );
